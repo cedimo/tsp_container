@@ -8,7 +8,7 @@ RUN npm run build
 
 
 # production stage
-FROM python:3.9
+FROM python:3.9-slim
 WORKDIR /code
 COPY ./tsp_backend/requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
